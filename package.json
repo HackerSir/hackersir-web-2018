@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "HackerSir Web 2018",
   "author": "KID <jyhsu2000@gmail.com> (https://kid7.club)",
+  "contributors": [
+    "Vongola <vongola12324@coder.tw> (https://vongola.tw)"
+  ],
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
