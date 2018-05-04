@@ -1,7 +1,18 @@
 div
+  //- Header
   div Begin of BaseLayout
+
+  //- Navbar
   div
-    router-link(:to="{name:'Home'}") 回首頁
+    ul
+      li
+        router-link(:to="{name:'Home'}") 首頁
+      li
+        router-link(:to="{name:'About'}") 關於我們
+
+  //- Main content
   div
     block content
+
+  //- Footer
   div End of BaseLayout

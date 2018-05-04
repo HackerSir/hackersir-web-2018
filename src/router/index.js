@@ -1,7 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
+
+import About from '@/components/about/About'
 import ClubIntroduction from '@/components/about/ClubIntroduction'
+import JoinUs from '@/components/about/JoinUs'
+import History from '@/components/about/History'
+import Rule from '@/components/about/Rule'
 
 Vue.use(Router)
 
@@ -13,9 +18,31 @@ export default new Router({
       component: Home
     },
     {
-      path: '/about/club-introduction',
-      name: 'ClubIntroduction',
-      component: ClubIntroduction
+      path: '/about',
+      name: 'About',
+      component: About,
+      children: [
+        {
+          path: 'club-introduction',
+          name: 'ClubIntroduction',
+          component: ClubIntroduction
+        },
+        {
+          path: 'join-us',
+          name: 'JoinUs',
+          component: JoinUs
+        },
+        {
+          path: 'history',
+          name: 'History',
+          component: History
+        },
+        {
+          path: 'rule',
+          name: 'Rule',
+          component: Rule
+        }
+      ]
     }
   ]
 })

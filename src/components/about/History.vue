@@ -1,4 +1,4 @@
 <template lang="pug">
   div
-    h1 社團介紹
+    h1 歷史軌跡
 </template>
