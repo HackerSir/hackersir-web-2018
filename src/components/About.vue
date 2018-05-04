@@ -1,5 +1,5 @@
 <template lang="pug">
-  extends ../layout/BaseLayout.pug
+  extends layout/BaseLayout.pug
   block content
     div
       //- Title
