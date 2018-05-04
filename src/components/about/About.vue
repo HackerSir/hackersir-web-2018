@@ -16,6 +16,10 @@
             router-link(:to="{name:'History'}") 歷史軌跡
           li
             router-link(:to="{name:'Rule'}") 社團規章
+          li
+            router-link(:to="{name:'Partner'}") 合作夥伴
+          li
+            router-link(:to="{name:'Cadre'}") 歷屆幹部
 
       //- Main content
       div

@@ -7,6 +7,8 @@ import ClubIntroduction from '@/components/about/ClubIntroduction'
 import JoinUs from '@/components/about/JoinUs'
 import History from '@/components/about/History'
 import Rule from '@/components/about/Rule'
+import Partner from '@/components/about/Partner'
+import Cadre from '@/components/about/Cadre'
 
 Vue.use(Router)
 
@@ -41,6 +43,16 @@ export default new Router({
           path: 'rule',
           name: 'Rule',
           component: Rule
+        },
+        {
+          path: 'partner',
+          name: 'Partner',
+          component: Partner
+        },
+        {
+          path: 'cadre',
+          name: 'Cadre',
+          component: Cadre
         }
       ]
     }
