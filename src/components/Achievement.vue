@@ -5,12 +5,12 @@
       //- Title
       h1 成果發表
 
-      //- Navbar
+      //- Menu
       div
-        ul
-          li
+        ul.list-inline
+          li.list-inline-item
             router-link(:to="{name:'ActivityRecord'}") 活動紀錄
-          li
+          li.list-inline-item
             router-link(:to="{name:'Project'}") 社團專案
 
       //- Main content

@@ -1,7 +1,13 @@
-<template>
-  <div id="app">
-    <router-view :key="$route.fullPath"></router-view>
-  </div>
+<template lang="pug">
+  div#app
+    router-view(:key="$route.fullPath")
+
+    //- Footer
+    footer.footer
+      div.container
+        p.text-center
+          | Copyright © 2018 Hackers' Club, Feng Chia University. All rights reserved.
+
 </template>
 
 <script>

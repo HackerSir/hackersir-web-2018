@@ -19,6 +19,8 @@ import Project from '@/components/achievement/Project'
 Vue.use(Router)
 
 export default new Router({
+  linkActiveClass: 'active',
+  linkExactActiveClass: 'active',
   routes: [
     {
       path: '/',

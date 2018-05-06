@@ -5,20 +5,20 @@
       //- Title
       h1 關於我們
 
-      //- Navbar
+      //- Menu
       div
-        ul
-          li
+        ul.list-inline
+          li.list-inline-item
             router-link(:to="{name:'ClubIntroduction'}") 社團介紹
-          li
+          li.list-inline-item
             router-link(:to="{name:'JoinUs'}") 加入我們
-          li
+          li.list-inline-item
             router-link(:to="{name:'History'}") 歷史軌跡
-          li
+          li.list-inline-item
             router-link(:to="{name:'Rule'}") 社團規章
-          li
+          li.list-inline-item
             router-link(:to="{name:'Partner'}") 合作夥伴
-          li
+          li.list-inline-item
             router-link(:to="{name:'Cadre'}") 歷屆幹部
 
       //- Main content

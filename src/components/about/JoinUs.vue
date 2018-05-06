@@ -1,4 +1,4 @@
 <template lang="pug">
   div
-    h1 加入我們
+    h2 加入我們
 </template>

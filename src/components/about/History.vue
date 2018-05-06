@@ -1,4 +1,4 @@
 <template lang="pug">
   div
-    h1 歷史軌跡
+    h2 歷史軌跡
 </template>

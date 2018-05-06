@@ -1,4 +1,4 @@
 <template lang="pug">
   div
-    h1 歷屆幹部
+    h2 歷屆幹部
 </template>
