@@ -7,11 +7,11 @@ div
         span.navbar-toggler-icon
       div.collapse.navbar-collapse#navbarNav
         ul.navbar-nav
-          li.nav-item
-            router-link.nav-link(:to="{name:'About'}") 關於我們
+          //- li.nav-item
+          //-   router-link.nav-link(:to="{name:'About'}") 關於我們
           li.nav-item.dropdown
             a#navbarDropdownMenuLinkAbout.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-              div.sr-only Toggle Dropdown
+              | 關於我們
             div.dropdown-menu(aria-labelledby="navbarDropdownMenuLinkAbout")
               router-link.dropdown-item(:to="{name:'ClubIntroduction'}") 社團介紹
               router-link.dropdown-item(:to="{name:'JoinUs'}") 加入我們
@@ -21,11 +21,11 @@ div
               router-link.dropdown-item(:to="{name:'Cadre'}") 歷屆幹部
           li.nav-item
             router-link.nav-link(:to="{name:'Activity'}") 社團活動
-          li.nav-item
-            router-link.nav-link(:to="{name:'Achievement'}") 成果發表
+          //- li.nav-item
+          //-   router-link.nav-link(:to="{name:'Achievement'}") 成果發表
           li.nav-item.dropdown
             a#navbarDropdownMenuLinkAchievement.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-              div.sr-only Toggle Dropdown
+              | 成果發表
             div.dropdown-menu(aria-labelledby="navbarDropdownMenuLinkAchievement")
               router-link.dropdown-item(:to="{name:'ActivityRecord'}") 活動紀錄
               router-link.dropdown-item(:to="{name:'Project'}") 社團專案
