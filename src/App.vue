@@ -5,7 +5,7 @@
     //- Footer
     footer.footer
       div.container
-        p.text-center
+        p.text-center(style={'margin-bottom': '0px'})
           | Copyright © 2018 Hackers' Club, Feng Chia University. All rights reserved.
 
 </template>
@@ -26,5 +26,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#app > div {
+  min-height: calc(100vh - 60px - 60px);
 }
 </style>
