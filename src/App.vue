@@ -1,9 +1,9 @@
 <template lang="pug">
-  div#app
+  div#app.d-flex.flex-column
     router-view(:key="$route.fullPath")
 
     //- Footer
-    footer.footer
+    footer.footer.mt-auto
       div.container
         p.text-center(style={'margin-bottom': '0px'})
           | Copyright © 2018 Hackers' Club, Feng Chia University. All rights reserved.
@@ -30,5 +30,11 @@ export default {
 
 #app > div {
   min-height: calc(100vh - 60px - 60px);
+}
+
+.footer {
+  background-color: gray;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 </style>
