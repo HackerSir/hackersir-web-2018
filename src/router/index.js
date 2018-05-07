@@ -16,6 +16,8 @@ import Achievement from '@/components/Achievement'
 import ActivityRecord from '@/components/achievement/ActivityRecord'
 import Project from '@/components/achievement/Project'
 
+import PageNotFound from '@/components/PageNotFound'
+
 Vue.use(Router)
 
 export default new Router({
@@ -85,6 +87,11 @@ export default new Router({
           component: Project
         }
       ]
+    },
+    {
+      path: '*',
+      name: 'PageNotFound',
+      component: PageNotFound
     }
   ]
 })
