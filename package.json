@@ -14,11 +14,13 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "deploy": "npm run build && vcg --message=\"Deploy to gh-pages\""
   },
   "dependencies": {
     "pug": "^2.0.3",
     "vue": "^2.5.2",
+    "vue-cli-ghpages": "^1.0.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

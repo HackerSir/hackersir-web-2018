@@ -25,6 +25,9 @@ yarn run e2e
 
 # run all tests
 yarn test
+
+# deploy local version to gh-pages (make sure your workspace is clean)
+yarn run deploy
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
