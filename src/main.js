@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueFilter from 'vue-filter'
+Vue.use(VueFilter)
 
 // axios. Usage: this.$http.get
 window.axios = require('axios')
