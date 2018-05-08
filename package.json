@@ -20,6 +20,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "pug": "^2.0.3",
+    "showdown": "^1.8.6",
     "vue": "^2.5.2",
     "vue-cli-ghpages": "^1.0.0",
     "vue-router": "^3.0.1"
