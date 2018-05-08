@@ -24,7 +24,9 @@ export default {
     this.$http.get(ruleUrl)
       .then(function (response) {
         let showdown = require('showdown')
-        let converter = new showdown.Converter()
+        let converter = new showdown.Converter({
+          noHeaderId: true
+        })
         vm.rule = converter.makeHtml(response.data)
       })
   }
