@@ -6,7 +6,6 @@ import router from './router'
 
 // axios. Usage: this.$http.get
 window.axios = require('axios')
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
 Vue.prototype.$http = window.axios
 
 Vue.config.productionTip = false
