@@ -18,6 +18,7 @@
     "deploy": "npm run build && vcg --message=\"Deploy to gh-pages\""
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "pug": "^2.0.3",
     "vue": "^2.5.2",
     "vue-cli-ghpages": "^1.0.0",
