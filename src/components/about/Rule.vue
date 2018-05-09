@@ -5,10 +5,12 @@
       | （以下為當前最新版本：{{ ruleVersion | substring(0,8) }}，詳細變更紀錄請至 #[a(href='https://github.com/HackerSir/Articles-of-association' target='_blank') 這裡] 查詢）
     div.container
       div.card
-        div.card-body.text-left(v-html='rule')
+        div.card-body.text-left
+          vue-markdown(:source="rule")
 </template>
 
 <script>
+import VueMarkdown from 'vue-markdown'
 export default {
   data: function () {
     return {
@@ -16,6 +18,9 @@ export default {
       ruleVersion: '',
       rule: '<i class="fas fa-spinner fa-spin"></i> 載入中...'
     }
+  },
+  components: {
+    VueMarkdown
   },
   mounted () {
     let vm = this
@@ -28,12 +33,7 @@ export default {
         // 讀取 rules.md
         vm.$http.get(ruleUrl)
           .then(function (response) {
-            // 利用 showdown 解析 markdown
-            let showdown = require('showdown')
-            let converter = new showdown.Converter({
-              noHeaderId: true
-            })
-            vm.rule = converter.makeHtml(response.data)
+            vm.rule = response.data
           })
       })
   }
