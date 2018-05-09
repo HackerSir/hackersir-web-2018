@@ -37,4 +37,8 @@ export default {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+
+.card {
+  background: rgba(255, 255, 255, .75)
+}
 </style>
