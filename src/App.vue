@@ -1,6 +1,6 @@
 <template lang="pug">
   div#app.d-flex.flex-column
-    router-view(:key="$route.fullPath")
+    router-view.pb-3(:key="$route.fullPath")
 
     //- Footer
     footer.footer.mt-auto
