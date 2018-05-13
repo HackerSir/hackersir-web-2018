@@ -13,29 +13,29 @@
           div.row
             div.col
               div.container.supershape
-                <i class="fas fa-key fa-2x"></i>
+                i.fas.fa-key.fa-2x
               h5 資訊安全
             div.col
               div.container.supershape
-                <i class="fas fa-cogs fa-2x"></i>
+                i.fas.fa-cogs.fa-2x
               h5 黑客精神
           h4 四大支線
           div.row
             div.col
               div.container.supershape
-                <i class="fas fa-lock fa-2x"></i>
+                i.fas.fa-lock.fa-2x
               h5 推廣資安概念
             div.col
               div.container.supershape
-                <i class="fas fa-terminal fa-2x"></i>
+                i.fas.fa-terminal.fa-2x
               h5 程式設計普及化
             div.col
               div.container.supershape
-                <i class="fas fa-code fa-2x"></i>
+                i.fas.fa-code.fa-2x
               h5 提倡開放原始碼
             div.col
               div.container.supershape
-                <i class="fas fa-shield fa-2x"></i>
+                i.fas.fa-shield.fa-2x
               h5 建立安全的E化校園
           h3 目前現況
           p 黑客社正努力從校內開始，培養每個社員的資訊安全概念及意識，讓社員們了解到生活中常常被遺忘的資安危機，透過一些攻擊與防禦的理論與實作，讓社員們能夠了解到問題的嚴重性及抵擋方法；同時我們也推廣黑客精神，對於不好的或可以加強的現況進行改善，我們透過Python這個語言，讓社員有基本的能力去進行創作。
