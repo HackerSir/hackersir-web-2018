@@ -5,7 +5,7 @@
     //- Footer
     footer.footer.mt-auto
       div.container
-        p.text-center(style={'margin-bottom': '0px'})
+        p.text-center.mb-0
           | Copyright © 2018 Hackers' Club, Feng Chia University. All rights reserved.
 
 </template>
