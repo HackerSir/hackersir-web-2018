@@ -39,6 +39,7 @@ export default {
 }
 
 .card {
-  background: rgba(255, 255, 255, .75)
+  background: rgba(255, 255, 255, .75);
+  margin-bottom: 1rem;
 }
 </style>
