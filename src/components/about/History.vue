@@ -126,9 +126,8 @@ export default {
     }
   },
   mounted () {
-    let vm = this
-    this.$http.get('static/data/timeline.json').then(function (response) {
-      vm.timelineEvents = response.data
+    this.$http.get('static/data/timeline.json').then(response => {
+      this.timelineEvents = response.data
     })
   }
 }
