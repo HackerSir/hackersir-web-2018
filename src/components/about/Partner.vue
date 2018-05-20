@@ -4,7 +4,7 @@
     div.container
       div.card
         div.card-body
-          p 我們有許許多多的合作夥伴，他們來自世界各地，四面八方。感謝有他們，和我們並肩走來！
+          p(style={'font-size':'20px'}) 我們有許許多多的合作夥伴，他們來自世界各地，四面八方。感謝有他們，和我們並肩走來！
       div.card
         div.card-body
           h3 校內組織
