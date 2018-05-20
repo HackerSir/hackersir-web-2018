@@ -23,17 +23,16 @@ export default {
     VueMarkdown
   },
   mounted () {
-    let vm = this
     // 由 GitHub 取得最新版本號
     this.$http.get('https://api.github.com/repos/HackerSir/Articles-of-association/commits/master')
-      .then(function (response) {
-        vm.ruleVersion = response.data.sha
+      .then(response => {
+        this.ruleVersion = response.data.sha
         // 利用 RawGit https://rawgit.com/ 作為 CDN
-        let ruleUrl = 'https://cdn.rawgit.com/HackerSir/Articles-of-association/' + vm.ruleVersion + '/rules.md'
+        let ruleUrl = 'https://cdn.rawgit.com/HackerSir/Articles-of-association/' + this.ruleVersion + '/rules.md'
         // 讀取 rules.md
-        vm.$http.get(ruleUrl)
-          .then(function (response) {
-            vm.rule = response.data
+        this.$http.get(ruleUrl)
+          .then(response => {
+            this.rule = response.data
           })
       })
   }
