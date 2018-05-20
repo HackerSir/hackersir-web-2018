@@ -7,7 +7,7 @@
 
       //- Menu
       div
-        ul.list-inline
+        ul.list-inline.page-menu
           li.list-inline-item
             router-link(:to="{name:'ClubIntroduction'}") 社團介紹
           li.list-inline-item

@@ -7,7 +7,7 @@
 
       //- Menu
       div
-        ul.list-inline
+        ul.list-inline.page-menu
           li.list-inline-item
             router-link(:to="{name:'ActivityRecord'}") 活動紀錄
           li.list-inline-item
