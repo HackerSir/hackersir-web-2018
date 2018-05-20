@@ -1,4 +1,4 @@
 <template lang="pug">
   div
-    h2 社團專案
+    h2.page-subtitle 社團專案
 </template>

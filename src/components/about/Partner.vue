@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    h2 合作夥伴
+    h2.page-subtitle 合作夥伴
     div.container
       div.card
         div.card-body

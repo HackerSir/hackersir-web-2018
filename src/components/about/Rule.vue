@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    h2 社團規章
+    h2.page-subtitle 社團規章
     div
       | （以下為當前最新版本：{{ ruleVersion | substring(0,8) }}，詳細變更紀錄請至 #[a(href='https://github.com/HackerSir/Articles-of-association' target='_blank') 這裡] 查詢）
     div.container

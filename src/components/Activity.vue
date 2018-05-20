@@ -3,5 +3,5 @@
   block content
     div
       //- Title
-      h1 社團活動
+      h1.page-title 社團活動
 </template>

@@ -3,7 +3,7 @@
   block content
     div
       //- Title
-      h1 成果發表
+      h1.page-title 成果發表
 
       //- Menu
       div

@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    h2 歷史軌跡
+    h2.page-subtitle 歷史軌跡
     div.container
       div.d-flex.justify-content-center
         div.timeline

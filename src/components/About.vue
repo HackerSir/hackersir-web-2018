@@ -3,7 +3,7 @@
   block content
     div
       //- Title
-      h1 關於我們
+      h1.page-title 關於我們
 
       //- Menu
       div

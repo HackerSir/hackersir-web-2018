@@ -32,6 +32,10 @@ export default {
   min-height: calc(100vh - 60px - 60px);
 }
 
+.page-title, .page-subtitle {
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
 .footer {
   background-color: gray;
   padding-top: 15px;

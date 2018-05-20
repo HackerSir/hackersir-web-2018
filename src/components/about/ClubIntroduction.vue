@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    h2 社團介紹
+    h2.page-subtitle 社團介紹
     div.container
       div.card
         div.card-body
