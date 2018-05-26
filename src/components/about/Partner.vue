@@ -14,8 +14,8 @@
             div.text-left
               h3.text-center.text-md-left {{ partner.name }}
               h4.text-center.text-md-left {{ partner.cht_name }}
-              p(v-for="descriptionLine in partner.description")
-                | {{ descriptionLine }}
+              p(v-for="descriptionParagraph in partner.description")
+                | {{ descriptionParagraph }}
 </template>
 
 <style scoped>
