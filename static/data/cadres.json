@@ -1,1 +1,18 @@
-{}
+{
+    "3": [
+        {
+            "name": "王XX",
+            "job": "職稱",
+            "avatar": "https://大頭貼.jpg",
+            "image": "https://全身照.jpg",
+            "department": "通訊系",
+            "description": "簡介"
+        }
+    ],
+    "2": [
+        
+    ],
+    "1": [
+        
+    ]
+}
