@@ -6,7 +6,7 @@
         div.card-body
           ul.nav.nav-wizard
             li(v-for="(nthYearCadres, nthYear) in cadres" :class="{'active':nthYear == selectedYear}")
-              router-link(:to="{name:'Cadre', query:{year:nthYear}}") 第{{ nthYear }}屆
+              router-link(:to="{name:'Cadre', params:{year:nthYear}}") 第{{ nthYear }}屆
       div.card(v-show="selectedYear")
         div.card-body
           | {{ cadres[selectedYear] }}
@@ -144,7 +144,7 @@ export default {
     this.$http.get('static/data/cadres.json').then(response => {
       this.cadres = response.data
     })
-    this.selectedYear = this.$route.query.year
+    this.selectedYear = this.$route.params.year
   }
 }
 </script>
