@@ -60,7 +60,7 @@ export default new Router({
           component: Partner
         },
         {
-          path: 'cadre/:year?',
+          path: 'cadre/:year?/:cadre?',
           name: 'Cadre',
           component: Cadre
         }
