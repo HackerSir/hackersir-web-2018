@@ -23,5 +23,5 @@
 
       //- Main content
       div
-        router-view(:key="$route.fullPath")
+        router-view
 </template>
