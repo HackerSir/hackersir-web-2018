@@ -7,12 +7,37 @@
           ul.nav.nav-wizard
             li(v-for="(nthYearCadres, nthYear) in cadres" :class="{'active':nthYear == selectedYear}")
               router-link(:to="{name:'Cadre', params:{year:nthYear}}") 第{{ nthYear }}屆
+          div.avatar-list.mt-1
+            a.avatar(href="javascript:void(0)" v-for="cadre in cadres[selectedYear]" :style="{ 'background-image': 'url(' + cadre.avatar + ')' }")
+              span.avatar-title {{ cadre.job }}
+              span.avatar-nickname {{ cadre.nickname || cadre.name }}
       div.card(v-show="selectedYear")
         div.card-body
           | {{ cadres[selectedYear] }}
 </template>
 
 <style scoped>
+.avatar-list {
+  display: flex;
+}
+.avatar-list > .avatar {
+  margin: 2px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: black 1px solid;
+  background: no-repeat center center / contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  text-decoration: none;
+  color: black;
+}
+.avatar-list > .avatar > .avatar-title,
+.avatar-list > .avatar > .avatar-nickname {
+  background: rgba(255, 255, 255, 0.7);
+}
 .nav-wizard > li {
   float: left;
 }

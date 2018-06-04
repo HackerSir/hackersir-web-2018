@@ -13,6 +13,23 @@
         
     ],
     "1": [
-        
+        {
+            "name": "小黑帽",
+            "nickname": "小黑帽N",
+            "job": "吉祥物",
+            "avatar": "http://hackersir.org/2015/img/logo/HackerSir.png",
+            "image": "http://hackersir.org/2015/img/logo/HackerSir.png",
+            "department": "資訊工程學系",
+            "description": "可愛的吉祥物"
+        },
+        {
+            "name": "小黑帽2",
+            "nickname": "小黑帽N2",
+            "job": "吉祥物",
+            "avatar": "http://hackersir.org/2015/img/logo/HackerSir.png",
+            "image": "http://hackersir.org/2015/img/logo/HackerSir.png",
+            "department": "資訊工程學系",
+            "description": "可愛的吉祥物"
+        }
     ]
 }
