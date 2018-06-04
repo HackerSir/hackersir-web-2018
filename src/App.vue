@@ -61,4 +61,8 @@ export default {
   background: rgba(255, 255, 255, .75);
   margin-bottom: 1rem;
 }
+
+nav.navbar {
+  z-index: 99;
+}
 </style>
