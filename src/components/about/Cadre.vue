@@ -144,7 +144,17 @@ export default {
     this.$http.get('static/data/cadres.json').then(response => {
       this.cadres = response.data
     })
-    this.selectedYear = this.$route.params.year
+    this.selectedYearUpdate()
+  },
+  watch: {
+    '$route.params.year': function (year) {
+      this.selectedYearUpdate()
+    }
+  },
+  methods: {
+    selectedYearUpdate: function () {
+      this.selectedYear = this.$route.params.year
+    }
   }
 }
 </script>
