@@ -38,6 +38,10 @@
 .avatar-list > .avatar > .avatar-nickname {
   background: rgba(255, 255, 255, 0.7);
 }
+.avatar-list > .avatar:hover > .avatar-title,
+.avatar-list > .avatar:hover > .avatar-nickname {
+  font-size: 1.2rem;
+}
 .nav-wizard > li {
   float: left;
 }
