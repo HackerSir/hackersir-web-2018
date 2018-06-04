@@ -15,10 +15,17 @@
                 router-link.avatar.m-1(:to="{name:'Cadre', params:{year: selectedYear, cadre: nthCadre}}" :style="{ 'background-image': 'url(' + cadre.avatar + ')' }")
                   span.avatar-title {{ cadre.job }}
                   span.avatar-nickname {{ cadre.nickname || cadre.name }}
-        div.ml-2.flex-grow-1(v-if="selectedCadre != undefined")
+        div.ml-2.flex-grow-1(v-if="selectedCadreData")
           div.card
-            div.card-body
-              | {{ cadres[selectedYear][selectedCadre] }}
+            div.card-body.d-flex
+              img.img-thumbnail.mr-2(:src="selectedCadreData.image")
+              div.w-100
+                h1 {{ selectedCadreData.nickname || selectedCadreData.name }}
+                ul.text-left
+                  li 本名：{{ selectedCadreData.name }}
+                  li 職稱：{{ selectedCadreData.job }}
+                  li 科系：{{ selectedCadreData.department }}
+                p.text-left {{ selectedCadreData.description }}
 </template>
 
 <style scoped>
@@ -172,15 +179,16 @@ export default {
     return {
       selectedYear: null,
       selectedCadre: null,
+      selectedCadreData: null,
       cadres: {}
     }
   },
   mounted () {
     this.$http.get('static/data/cadres.json').then(response => {
       this.cadres = response.data
+      this.selectedYearUpdated()
+      this.selectedCadreUpdated()
     })
-    this.selectedYearUpdated()
-    this.selectedCadreUpdated()
   },
   watch: {
     '$route.params.year': function (year) {
@@ -193,10 +201,18 @@ export default {
   methods: {
     selectedYearUpdated: function () {
       this.selectedYear = this.$route.params.year
+      this.selectedCadreDataUpdated()
     },
     selectedCadreUpdated: function () {
       this.selectedCadre = this.$route.params.cadre
-      console.log(this.selectedCadre)
+      this.selectedCadreDataUpdated()
+    },
+    selectedCadreDataUpdated: function () {
+      if (this.selectedYear != null && this.selectedCadre != null) {
+        this.selectedCadreData = this.cadres[this.selectedYear][this.selectedCadre]
+      } else {
+        this.selectedCadreData = null
+      }
     }
   }
 }
