@@ -7,20 +7,25 @@
           ul.nav.nav-wizard
             li(v-for="(nthYearCadres, nthYear) in cadres" :class="{'active':nthYear == selectedYear}")
               router-link(:to="{name:'Cadre', params:{year:nthYear}}") 第{{ nthYear }}屆
-          div.avatar-list.mt-1
-            a.avatar(href="javascript:void(0)" v-for="cadre in cadres[selectedYear]" :style="{ 'background-image': 'url(' + cadre.avatar + ')' }")
-              span.avatar-title {{ cadre.job }}
-              span.avatar-nickname {{ cadre.nickname || cadre.name }}
-      div.card(v-show="selectedYear")
-        div.card-body
-          | {{ cadres[selectedYear] }}
+      div.d-flex(v-if="selectedYear")
+        div
+          div.card
+            div.card-body.d-flex(:class="{'flex-column': selectedCadre != undefined}")
+              div(v-for="(cadre, nthCadre) in cadres[selectedYear]")
+                router-link.avatar.m-1(:to="{name:'Cadre', params:{year: selectedYear, cadre: nthCadre}}" :style="{ 'background-image': 'url(' + cadre.avatar + ')' }")
+                  span.avatar-title {{ cadre.job }}
+                  span.avatar-nickname {{ cadre.nickname || cadre.name }}
+        div.ml-2.flex-grow-1(v-if="selectedCadre != undefined")
+          div.card
+            div.card-body
+              | {{ cadres[selectedYear][selectedCadre] }}
 </template>
 
 <style scoped>
 .avatar-list {
   display: flex;
 }
-.avatar-list > .avatar {
+.avatar {
   margin: 2px;
   width: 100px;
   height: 100px;
@@ -34,12 +39,12 @@
   text-decoration: none;
   color: black;
 }
-.avatar-list > .avatar > .avatar-title,
-.avatar-list > .avatar > .avatar-nickname {
+.avatar > .avatar-title,
+.avatar > .avatar-nickname {
   background: rgba(255, 255, 255, 0.7);
 }
-.avatar-list > .avatar:hover > .avatar-title,
-.avatar-list > .avatar:hover > .avatar-nickname {
+.avatar:hover > .avatar-title,
+.avatar:hover > .avatar-nickname {
   font-size: 1.2rem;
 }
 .nav-wizard > li {
@@ -166,6 +171,7 @@ export default {
   data: function () {
     return {
       selectedYear: null,
+      selectedCadre: null,
       cadres: {}
     }
   },
@@ -174,15 +180,23 @@ export default {
       this.cadres = response.data
     })
     this.selectedYearUpdated()
+    this.selectedCadreUpdated()
   },
   watch: {
     '$route.params.year': function (year) {
       this.selectedYearUpdated()
+    },
+    '$route.params.cadre': function (cadre) {
+      this.selectedCadreUpdated()
     }
   },
   methods: {
     selectedYearUpdated: function () {
       this.selectedYear = this.$route.params.year
+    },
+    selectedCadreUpdated: function () {
+      this.selectedCadre = this.$route.params.cadre
+      console.log(this.selectedCadre)
     }
   }
 }
