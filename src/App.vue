@@ -39,7 +39,6 @@ export default {
 .page-menu a {
   text-decoration:none;
   border-bottom: 2px solid white;
-  box-shadow: inset 0 -4px 0 white;
   color: white;
   transition: all .3s cubic-bezier(.33,.66,.66,1);
   transition-property: background, color;
