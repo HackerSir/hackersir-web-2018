@@ -18,7 +18,8 @@
         div.ml-2.flex-grow-1(v-if="selectedCadreData")
           div.card
             div.card-body.d-flex
-              img.img-thumbnail.mr-2(:src="selectedCadreData.image" v-if="selectedCadreData.image")
+              div.mr-2
+                img.img-thumbnail(:src="selectedCadreData.image" v-if="selectedCadreData.image")
               div.w-100
                 h1 {{ selectedCadreData.nickname || selectedCadreData.name }}
                 ul.text-left
