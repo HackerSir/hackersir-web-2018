@@ -10,7 +10,7 @@
       div.d-flex(v-if="selectedYear")
         div
           div.card
-            div.card-body.d-flex(:class="{'flex-column': selectedCadre != undefined}")
+            div.card-body.d-flex.flex-wrap(:class="{'flex-column': selectedCadre != undefined}")
               div(v-for="(cadre, nthCadre) in cadres[selectedYear]")
                 router-link.avatar.m-1(:to="{name:'Cadre', params:{year: selectedYear, cadre: nthCadre}}" :style="{ 'background-image': 'url(' + cadre.avatar + ')' }")
                   span.avatar-title {{ cadre.job }}
