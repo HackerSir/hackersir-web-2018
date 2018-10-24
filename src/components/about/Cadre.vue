@@ -30,9 +30,6 @@
 </template>
 
 <style scoped>
-.avatar-list {
-  display: flex;
-}
 .avatar {
   margin: 2px;
   width: 100px;
