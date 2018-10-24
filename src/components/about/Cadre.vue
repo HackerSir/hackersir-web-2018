@@ -10,7 +10,7 @@
       div.d-flex.flex-column.flex-md-row(v-if="selectedYear")
         div
           div.card
-            div.card-body.d-flex.flex-md-wrap(:class="{'flex-md-column': selectedCadre != undefined, 'flex-wrap': selectedCadre == undefined}" style="overflow-y: scroll")
+            div.card-body.d-flex.flex-md-wrap(:class="{'flex-md-column': selectedCadre != undefined, 'flex-wrap': selectedCadre == undefined}" style="overflow-x: auto")
               div(v-for="(cadre, nthCadre) in cadres[selectedYear]")
                 router-link.avatar.m-1(:to="{name:'Cadre', params:{year: selectedYear, cadre: nthCadre}}" :style="{ 'background-image': 'url(' + cadre.avatar + ')' }")
                   span.avatar-title {{ cadre.job }}
