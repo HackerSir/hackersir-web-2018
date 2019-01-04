@@ -51,7 +51,7 @@ export default {
 }
 
 .footer {
-  background-color: gray;
+  background-color: #e3e3e3;
   padding-top: 15px;
   padding-bottom: 15px;
 }
