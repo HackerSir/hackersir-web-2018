@@ -7,18 +7,19 @@
           ul.nav.nav-wizard
             li(v-for="(nthYearCadres, nthYear) in cadres" :class="{'active':nthYear == selectedYear}")
               router-link(:to="{name:'Cadre', params:{year:nthYear}}") 第{{ nthYear }}屆
-      div.d-flex(v-if="selectedYear")
+      div.d-flex.flex-column.flex-md-row(v-if="selectedYear")
         div
           div.card
-            div.card-body.d-flex(:class="{'flex-column': selectedCadre != undefined}")
+            div.card-body.d-flex.flex-md-wrap(:class="{'flex-md-column': selectedCadre != undefined, 'flex-wrap': selectedCadre == undefined}" style="overflow-x: auto")
               div(v-for="(cadre, nthCadre) in cadres[selectedYear]")
                 router-link.avatar.m-1(:to="{name:'Cadre', params:{year: selectedYear, cadre: nthCadre}}" :style="{ 'background-image': 'url(' + cadre.avatar + ')' }")
                   span.avatar-title {{ cadre.job }}
                   span.avatar-nickname {{ cadre.nickname || cadre.name }}
-        div.ml-2.flex-grow-1(v-if="selectedCadreData")
+        div.ml-md-2.flex-grow-1(v-if="selectedCadreData")
           div.card
-            div.card-body.d-flex
-              img.img-thumbnail.mr-2(:src="selectedCadreData.image")
+            div.card-body.d-flex.flex-column.flex-sm-row
+              div.mr-sm-2
+                img.img-thumbnail(:src="selectedCadreData.image" v-if="selectedCadreData.image")
               div.w-100
                 h1 {{ selectedCadreData.nickname || selectedCadreData.name }}
                 ul.text-left
@@ -29,9 +30,6 @@
 </template>
 
 <style scoped>
-.avatar-list {
-  display: flex;
-}
 .avatar {
   margin: 2px;
   width: 100px;
