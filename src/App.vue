@@ -6,7 +6,7 @@
     footer.footer.mt-auto
       div.container
         p.text-center.mb-0
-          | Copyright © 2018 Hackers' Club, Feng Chia University. All rights reserved.
+          | Copyright © 2018-2019 Hackers' Club, Feng Chia University. All rights reserved.
 
 </template>
 
