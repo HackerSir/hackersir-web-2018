@@ -29,7 +29,7 @@
                 p.text-left {{ selectedCadreData.description }}
 </template>
 
-<style scoped>
+<style lang="stylus" scoped>
 .avatar {
   margin: 2px;
   width: 100px;
@@ -43,14 +43,13 @@
   overflow: hidden;
   text-decoration: none;
   color: black;
-}
-.avatar > .avatar-title,
-.avatar > .avatar-nickname {
-  background: rgba(255, 255, 255, 0.7);
-}
-.avatar:hover > .avatar-title,
-.avatar:hover > .avatar-nickname {
-  font-size: 1.2rem;
+  & > .avatar-title, & > .avatar-nickname {
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  &:hover > .avatar-title, &:hover > .avatar-nickname {
+    font-size: 1.2rem;
+  }
 }
 .nav-wizard > li {
   float: left;

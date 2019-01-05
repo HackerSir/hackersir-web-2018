@@ -16,7 +16,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="stylus">
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 
 #app {
@@ -26,10 +26,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-
-#app > div {
-  min-height: calc(100vh - 60px - 60px);
+  & > div {
+    min-height: calc(100vh - 60px - 60px);
+  }
 }
 
 .page-title, .page-subtitle {

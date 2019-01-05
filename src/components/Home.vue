@@ -22,20 +22,24 @@
 
 </template>
 
-<style scoped>
+<style scoped lang="stylus">
 .display-1 {
   text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
 }
+
 .display-3 {
   text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
 }
+
 .list-group-item {
   font-size: 2rem;
 }
+
 a.link-icon {
   color: #9b0e27;
-}
-a.link-icon:hover {
-  color: #c60d25;
+
+  &:hover {
+    color: #c60d25;
+  }
 }
 </style>
